@@ -1,0 +1,2 @@
+docker build -t nginx .
+docker run -d --name nginxcontainer -p 8080:80 nginx
