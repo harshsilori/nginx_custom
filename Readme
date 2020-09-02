@@ -1,2 +1,5 @@
 docker build -t nginx .
 docker run -d --name nginxcontainer -p 8080:80 nginx
+
+docker swarm init
+docker service create -d --replicas=4 --name nginx-service --mount source=myvol2,target=/app nginx
